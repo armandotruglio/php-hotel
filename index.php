@@ -60,6 +60,8 @@ $voteFilter = $_GET["vote"];
 
 <body>
 
+    <h1 class="text-center pt-5">HOTEL</h1>
+
     <div class="container pt-5">
         <div class="row">
             <div class="col-12">
@@ -84,6 +86,17 @@ $voteFilter = $_GET["vote"];
                     </div>
                     <button type="submit" class="btn btn-primary">Filtra</button>
                     <button type="reset" class="btn btn-warning">Cancella</button>
+                    <span class="mx-3">FILTRO PARCHEGGIO:
+                        <?php if (!$parkingFilter) {
+                            echo "NO";
+                        } else {
+                            echo "SI";
+                        }  ?></span>
+                    <span>FILTRO VOTO: <?php if (!$voteFilter) {
+                                            echo "NO";
+                                        } else {
+                                            echo ">" . $voteFilter;
+                                        }  ?></span>
                 </form>
             </div>
             <div class="col-12">
